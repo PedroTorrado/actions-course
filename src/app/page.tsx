@@ -7,6 +7,9 @@ export default function Home() {
         <h2>Hello World</h2>
       </div>
       <Link href="/about">About</Link>
+      <br />
+      <input placeholder="Search" /> 
+
     </main>
   );
 }

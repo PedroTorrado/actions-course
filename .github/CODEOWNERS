@@ -1,0 +1,5 @@
+* @PedroTorrado
+*.js @PedroTorrado
+*.ts @PedroTorrado
+*.tsx @PedroTorrado
+/e2e/ @PedroTorrado
