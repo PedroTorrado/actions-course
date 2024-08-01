@@ -9,6 +9,9 @@ export default function Home() {
       <Link href="/about">About</Link>
       <br />
       <input placeholder="Search" />
+      <div>
+        <h2>Test changes tries: 1</h2>
+      </div>
     </main>
   );
 }
