@@ -30,22 +30,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_TOKEN }}
       - run: echo '${{ toJson(steps.changesets.outputs)}}'
-      - name: Send a Slack Message for Version PR Updates
-        if: steps.changesets.outputs.pullRequestNumber
-        uses: slackapi/slack-github-action@v1
-        with:
-          payload: |
-            {
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "✅ *<https://github.com/${{github.repository}}/pull/${{ steps.changesets.outputs.pullRequestNumber }}|Version Pull Request>* was updated. Review it and merge it to create a new release and deployment."
-                  }
-                }
-              ]
-            }
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
