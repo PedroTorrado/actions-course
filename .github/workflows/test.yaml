@@ -28,7 +28,7 @@ jobs:
           name: build
           path: .next/
       - name: Run Unit Tests
-        run: npm run Tests
+        run: npm run test
       - uses: actions/upload-artifact@v3
         if: always()
         with:
