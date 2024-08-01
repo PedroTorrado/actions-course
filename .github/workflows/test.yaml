@@ -13,10 +13,8 @@ jobs:
         with:
           node-version: 18
           cache: "npm"
-
       - name: Install Dependencies
-        run: |
-          npm i
+        run: npm ci
       - name: Check Formatting
         run: npm run format
       - name: Check Formatting
