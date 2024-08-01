@@ -8,8 +8,7 @@ export default function Home() {
       </div>
       <Link href="/about">About</Link>
       <br />
-      <input placeholder="Search" /> 
-
+      <input placeholder="Search" />
     </main>
   );
 }
