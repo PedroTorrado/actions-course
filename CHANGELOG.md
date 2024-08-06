@@ -1,5 +1,11 @@
 # next-1
 
+## 1.0.0
+
+### Major Changes
+
+- aedd360: Updated e2e testing, and page
+
 ## 0.3.0
 
 ### Minor Changes
