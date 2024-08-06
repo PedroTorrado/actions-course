@@ -38,7 +38,7 @@ jobs:
           path: coverage/
       - name: Store Playwright's Version
         run: |
-          PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
+          PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//' | awk '{print $1}' | tr -d '\n')
           echo "Playwright's version: $PLAYWRIGHT_VERSION"
           echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
       - name: Cache Playwright Browsers
